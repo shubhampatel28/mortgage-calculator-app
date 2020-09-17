@@ -14,12 +14,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     private SeekBar seekBarPercentage;
     private TextView seekBarTextPercent;
     private TextView amountBorrowed;
     private TextView monthlypayment;
+    private TextView paymentTitle;
     private RadioGroup radioGroup;
     private CheckBox taxCheckBox;
 
@@ -27,9 +28,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         amountBorrowed = (TextView) findViewById(R.id.amountBorrowed);
         monthlypayment = (TextView) findViewById(R.id.monthlypayment);
-
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         taxCheckBox = (CheckBox) findViewById(R.id.taxCheckBox);
 
@@ -88,6 +89,8 @@ public class MainActivity extends Activity {
                     tax = 0.1*amount;
                 }
                 String mortgageamountpayment = String.valueOf((MortgageCalc.calcMortgage(amount, rate ,selectedTerm , tax)));
+                paymentTitle = (TextView) findViewById(R.id.paymenttitle);
+                paymentTitle.setText("Your Monthly Payment");
                 monthlypayment.setText("$" + mortgageamountpayment);
             }
         }

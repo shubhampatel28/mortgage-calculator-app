@@ -9,12 +9,11 @@
 
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/paymenttitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="65dp"
         android:background="#000000"
-        android:text="@string/monthlypymnt"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="14sp" />
@@ -95,14 +94,15 @@
         android:min="0"
         android:progress="10"
         android:progressTint="#E54304"
-        android:scrollbarSize="16dp" />
+        android:scrollbarSize="16dp"
+        android:secondaryProgressTint="#FFFFFF" />
 
     <TextView
         android:id="@+id/textpercentage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textColor="#3F51B5" />
+        android:textColor="#F44336" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
