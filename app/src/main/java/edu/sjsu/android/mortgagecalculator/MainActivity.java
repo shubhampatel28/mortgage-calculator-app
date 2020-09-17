@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 //Taxes and Insurance are supposed to be included in the Mortgage Calculation
                 double tax = 0;
                 if(taxCheckBox.isChecked()){
-                    tax = 0.1*amount;
+                    tax = 0.001*amount;
                 }
                 String mortgageamountpayment = MortgageCalc.calcMortgage(amount, rate, selectedTerm, tax);
                 paymentTitle = (TextView) findViewById(R.id.paymenttitle);
