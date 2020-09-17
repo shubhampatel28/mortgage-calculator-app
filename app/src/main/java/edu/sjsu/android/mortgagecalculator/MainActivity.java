@@ -2,17 +2,14 @@ package edu.sjsu.android.mortgagecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 //seekBar_progress = (float)progress;
-                seekBarTextPercent.setText(Float.toString(progress));
+                seekBarTextPercent.setText(Float.toString(progress)+"%");
             }
 
             @Override
@@ -78,17 +75,16 @@ public class MainActivity extends AppCompatActivity {
                 RadioButton selectedRadioButtonTerm = (RadioButton) findViewById(selectedButtonID);
 
                 int selectedTerm = Integer.parseInt(selectedRadioButtonTerm.getText().toString());
-                System.out.println(selectedTerm);
-                System.out.println(amount);
+
                 //String selectedRate = seekBarTextPercent.getText().toString();
                 double rate = seekBarPercentage.getProgress();
-                System.out.println(rate);
+
                 //Taxes and Insurance are supposed to be included in the Mortgage Calculation
                 double tax = 0;
                 if(taxCheckBox.isChecked()){
                     tax = 0.1*amount;
                 }
-                String mortgageamountpayment = String.valueOf((MortgageCalc.calcMortgage(amount, rate ,selectedTerm , tax)));
+                String mortgageamountpayment = MortgageCalc.calcMortgage(amount, rate, selectedTerm, tax);
                 paymentTitle = (TextView) findViewById(R.id.paymenttitle);
                 paymentTitle.setText("Your Monthly Payment");
                 monthlypayment.setText("$" + mortgageamountpayment);

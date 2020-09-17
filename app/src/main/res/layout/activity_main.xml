@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
@@ -12,7 +13,7 @@
         android:id="@+id/paymenttitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="30dp"
         android:background="#000000"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -20,11 +21,12 @@
 
     <TextView
         android:id="@+id/monthlypayment"
-        android:layout_width="match_parent"
-        android:layout_height="88dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
         android:background="#000000"
         android:paddingTop="16dp"
-        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="56sp" />
 
@@ -43,7 +45,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="26dp"
         android:text="@string/interest"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
@@ -101,8 +103,10 @@
         android:id="@+id/textpercentage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="10%"
         android:textAlignment="center"
-        android:textColor="#F44336" />
+        android:textColor="#F44336"
+        android:textColorHint="#000000" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -113,7 +117,7 @@
             android:id="@+id/radiobutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="26dp"
             android:lineSpacingExtra="8sp"
             android:text="@string/term"
             android:textColor="#FFFFFF"
@@ -166,5 +170,16 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="© Created by Shubham Patel"
+        android:textAlignment="viewEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:textStyle="italic" />
 
 </LinearLayout>
