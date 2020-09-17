@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Mortgage Calculator</string>
+    <string name="monthlypymnt">Your Monthly Payment</string>
+    <string name="amtborrowed">Amount Borrowed</string>
+    <string name="yearterm15">15</string>
+    <string name="yearterm20">20</string>
+    <string name="yearterm30">30</string>
+    <string name="tax">Taxes</string>
+    <string name="insc">Insurance</string>
+    <string name="calc">Calculate</string>
+    <string name="term">Loan Term (in Years)</string>
+    <string name="taxandins">Tax and Insurance</string>
+    <string name="interest">Interest Rate</string>
+    <string name="seekbarmin">0</string>
+    <string name="seekbarmax">20</string>
+    <string name="seekbarmid">10</string>
+    <string name="amt">Amount</string>
+
+</resources>

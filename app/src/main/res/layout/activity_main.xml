@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#000000"
+        android:text="@string/monthlypymnt"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/monthlypayment"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="#000000"
+        android:paddingTop="16dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="56sp" />
+
+    <EditText
+        android:id="@+id/amountBorrowed"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Amount Borrowed"
+        android:inputType="numberSigned|numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/interest"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/seekbarmin"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/seekbarmid"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/seekbarmax"
+            android:textAlignment="viewEnd"
+            android:textColor="#F4F4F4"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarPercentage"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:backgroundTint="#FFFFFF"
+        android:max="20"
+        android:min="0"
+        android:progress="10"
+        android:progressTint="#E54304"
+        android:scrollbarSize="16dp" />
+
+    <TextView
+        android:id="@+id/textpercentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#3F51B5" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/term"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/termButton15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/yearterm15"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/termButton20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/yearterm20"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/termButton30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/yearterm30"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/taxCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Include Taxes and Inurance"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/calbutton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#E54304"
+        android:onClick="onClick"
+        android:text="@string/calc"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
