@@ -58,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Please enter a valid number", Toast.LENGTH_LONG).show();
                 return;
             }
+            if (Double.parseDouble(amountBorrowed.getText().toString()) <= 0) {
+                Toast.makeText(this, "Please enter a number greater than 0", Toast.LENGTH_LONG).show();
+                return;
+            }
 
             //Error: No radio button is checked for the term year
             if(radioGroup.getCheckedRadioButtonId() == -1){
