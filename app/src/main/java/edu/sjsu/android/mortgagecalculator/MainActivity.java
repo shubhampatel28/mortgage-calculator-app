@@ -53,6 +53,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View view){
         if(view.getId() == R.id.calbutton){
+            double inputVal = 0;
+            String input = amountBorrowed.getText().toString().trim();
+
+            // Throw Error: Invalid input. Contains bad characters like .
+            try {
+                inputVal = Double.parseDouble(input);
+            } catch (NumberFormatException i){
+                Toast.makeText(this, "Invalid input", Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            /**
             //Error: No text is entered for the amount borrowed
             if(amountBorrowed.length()==0){
                 Toast.makeText(this, "Please enter a valid number", Toast.LENGTH_LONG).show();
@@ -62,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Please enter a number greater than 0", Toast.LENGTH_LONG).show();
                 return;
             }
+            if (Double.parseDouble(amountBorrowed.getText().toString()) <= 0) {
+                Toast.makeText(this, "Please enter a valid number", Toast.LENGTH_LONG).show();
+                return;
+            }*/
+
 
             //Error: No radio button is checked for the term year
             if(radioGroup.getCheckedRadioButtonId() == -1){
@@ -70,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
             //Radio Button (Term)is selected so no error, proceed to calculating Mortgage
             else{
-                double amount = Float.parseFloat(amountBorrowed.getText().toString());
+
 
                 //Get the selected radiobutton from radio group         Source:https://stackoverflow.com/questions/18179124/android-getting-value-from-selected-radiobutton
                 int selectedButtonID = radioGroup.getCheckedRadioButtonId();
@@ -86,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
                 //Taxes and Insurance are supposed to be included in the Mortgage Calculation
                 double tax = 0;
                 if(taxCheckBox.isChecked()){
-                    tax = 0.001*amount;
+                    tax = 0.001*inputVal;
                 }
-                String mortgageamountpayment = MortgageCalc.calcMortgage(amount, rate, selectedTerm, tax);
+                String mortgageamountpayment = MortgageCalc.calcMortgage(inputVal, rate, selectedTerm, tax);
                 paymentTitle = (TextView) findViewById(R.id.paymenttitle);
                 paymentTitle.setText("Your Monthly Payment");
                 monthlypayment.setText("$" + mortgageamountpayment);

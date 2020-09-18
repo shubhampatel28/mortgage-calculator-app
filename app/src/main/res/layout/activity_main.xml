@@ -37,9 +37,10 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Amount Borrowed"
-        android:inputType="numberSigned|numberDecimal"
+        android:inputType="number|numberDecimal"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
+
 
     <TextView
         android:id="@+id/textView"
